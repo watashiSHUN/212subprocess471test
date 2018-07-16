@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 
 namespace core212console
 {
@@ -6,7 +7,16 @@ namespace core212console
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("start running process");
+            var sw = new Stopwatch();
+            sw.Start();
+            using (var p = Process.Start("consoleapp471.exe"))
+            {
+                p.WaitForExit();
+            }
+            sw.Stop();
+            Console.WriteLine($"duration: {sw.ElapsedMilliseconds} ms");
+            Console.Read();
         }
     }
 }
