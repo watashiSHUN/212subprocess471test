@@ -3,6 +3,8 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.1</TargetFramework>
+    <RuntimeIdentifier>win10-x86</RuntimeIdentifier>
+    <RuntimeFrameworkVersion>2.1.1</RuntimeFrameworkVersion>
   </PropertyGroup>
 
   <ItemGroup>
